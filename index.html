@@ -20,7 +20,7 @@
                     fragment = (hash + fragment).includes('#') ? 'k' : fragment;
                     fragment = '' == fragment ? 'home' : fragment;
                     var url = routes[fragment.toLowerCase()];
-                    if (!url) { url = location.origin + "/home"; }
+                    if (!url) { url = location.origin + "/mo_backup/home"; }
                     location.href = url + hash;
                 });
         });
