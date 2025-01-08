@@ -11,7 +11,7 @@
     </style>
     <script type="text/javascript">
         window.addEventListener('load', function (_) {
-            fetch(location.origin + '/mo_backup/0/lang/routes.json')
+            fetch(location.origin + '/0/lang/routes.json')
                 .then(function (response) { return response.json(); })
                 .then(function (routes) {
                     var hash = location.hash;
@@ -20,12 +20,8 @@
                     fragment = (hash + fragment).includes('#') ? 'k' : fragment;
                     fragment = '' == fragment ? 'home' : fragment;
                     var url = routes[fragment.toLowerCase()];
-                    if (!url) { url = location.origin + "/mo_backup"; }
+                    if (!url) { url = location.origin + "/home"; }
                     location.href = url + hash;
-                })
-                .catch(function (error) {
-                    console.error('Error fetching routes:', error);
-                    location.href = location.origin + "/mo_backup";
                 });
         });
     </script>
