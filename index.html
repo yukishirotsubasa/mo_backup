@@ -21,7 +21,7 @@
                     fragment = '' == fragment ? 'home' : fragment;
                     var url = routes[fragment.toLowerCase()];
                     if (!url) { url = location.origin + "/mo_backup/home"; }
-                    location.href = url + hash;
+                    location.href = url + "/mo_backup" + hash;
                 });
         });
     </script>
