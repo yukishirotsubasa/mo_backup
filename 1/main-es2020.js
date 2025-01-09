@@ -6610,7 +6610,7 @@ let SkillQuestComponent = /*@__PURE__*/ (() => {
                     obj.ul_points = obj.point_required + 750;
                     this.dataSource.data.push(obj);
                     count++;
-                    if (count % 1084 === 0) {
+                    if (count % 1085 === 0) {
                         return;
                     }
                 }
