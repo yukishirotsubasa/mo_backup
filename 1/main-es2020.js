@@ -2472,7 +2472,7 @@ let BaseApiService = /*@__PURE__*/ (() => {
         }
         getLanguageFiles(langCode, _string = 'mo_tool_') {
             if (Translate.settings[langCode] && Translate.settings[langCode][_string + langCode]) {
-                const url = (_string === 'mo_tool_' ? ('/1/assets/lang/') : (this.urls.cdn + 'lang/' + _string)) +
+                const url = (_string === 'mo_tool_' ? ('/mo_backup/1/assets/lang/') : (this.urls.cdn + 'lang/' + _string)) +
                     langCode + '.json?' + Translate.settings[langCode][_string + langCode];
                 return this.http.get(url).toPromise();
             }
